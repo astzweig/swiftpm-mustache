@@ -2,16 +2,19 @@
 
 Package for rendering Mustache templates. Mustache is a "logic-less" templating language commonly used in web and mobile platforms. You can find out more about Mustache [here](http://mustache.github.io/mustache.5.html).
 
+> [!NOTE]
+> This repository is a fork of [hummingbird-project/swift-mustache](https://github.com/hummingbird-project/swift-mustache). It may contain modifications required by our other open source tools.
+
 ## Usage
 
-Load your templates from the filesystem 
+Load your templates from the filesystem
 ```swift
 import Mustache
 let library = MustacheLibrary("folder/my/templates/are/in")
 ```
 This will look for all the files with the extension ".mustache" in the specified folder and subfolders and attempt to load them. Each file is registed with the name of the file (with subfolder, if inside a subfolder) minus the "mustache" extension.
 
-Render an object with a template 
+Render an object with a template
 ```swift
 let output = library.render(object, withTemplate: "myTemplate")
 ```
@@ -19,7 +22,7 @@ let output = library.render(object, withTemplate: "myTemplate")
 
 ## Support
 
-Swift-Mustache supports all standard Mustache tags and is fully compliant with the Mustache [spec](https://github.com/mustache/spec) with the exception of the Lambda support.  
+Swift-Mustache supports all standard Mustache tags and is fully compliant with the Mustache [spec](https://github.com/mustache/spec) with the exception of the Lambda support.
 
 ## Additional features
 
